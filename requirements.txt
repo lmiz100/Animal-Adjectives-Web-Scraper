@@ -1,0 +1,9 @@
+requests
+beautifulsoup4
+rich
+jinja2
+fastapi
+uvicorn[standard]
+pytest
+pytest-asyncio
+httpx
