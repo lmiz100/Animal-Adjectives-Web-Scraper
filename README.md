@@ -1,7 +1,7 @@
 # 🐾 Animal Adjectives Scraper
 
 A FastAPI-based web application that scrapes Wikipedia's [List of animal names](https://en.wikipedia.org/wiki/List_of_animal_names), extracts **collateral adjectives** and the **animals** that belong to them, 
-downloads representative images for each animal, and generates a beautiful HTML report showcasing animals and their collateral adjectives..
+downloads representative images for each animal, and generates a beautiful HTML report showcasing animals and their collateral adjectives.
 
 ---
 
@@ -39,7 +39,7 @@ venv\Scripts\activate
 ```bash
 pip install -r requirements.txt
 ```
-
+<br>
 
 ## ▶️ Running the Program
 
@@ -50,29 +50,28 @@ uvicorn main:app --port 8000
 
 This will:
 * Start the FastAPI server on http://localhost:8000
-* Automatically begin scraping data from Wikipedia in the background
-* Download animal images to `/tmp/`
-* Generate a styled HTML report at `output/animals.html`
+* Automatically begin scraping data from Wikipedia in the background.
+* Download animal images to `/tmp/`.
+* Generate a styled HTML report at `output/animals.html`.
 
 ### Available Endpoints
 - **`GET /`** - View the generated animal report
 - **`POST /update-report`** - Trigger a manual report update
 
 ### Usage
-1. Start the server with the command above
+1. Start the server with the command above.
 2. Open your browser and navigate to http://localhost:8000
-3. The animal report will be displayed
-4. To refresh the data, send a POST request to `/update-report` or restart the server
+3. The animal report will be displayed.
+4. To refresh the data, send a POST request to `/update-report` or restart the server.
 
 ### Note
-- The initial report generation happens automatically on startup
-- Images are served from `/tmp/` directory
-- If the main report isn't ready, a fallback version will be served
+- The initial report generation happens automatically on startup.
+- Images are served from `/tmp/` directory.
+- If the main report isn't ready, a fallback version will be served.
 - The HTML output groups animals by their collateral adjective in a card-style layout with images. You can filter results by the collateral adjective.
-
+<br>
 
 ## 🧪 Running Tests
-Assuming you use `pytest`:
 ```bash
 pytest -v
 ```
